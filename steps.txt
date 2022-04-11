@@ -1,0 +1,12 @@
++create package with the steps from:
+https://docs.ros.org/en/galactic/Tutorials/Creating-Your-First-ROS2-Package.html#create-a-package
+
++ create workspace:
+mkdir ~/projects/<ws_name>/src
+cd ~/projects/<ws_name>/src
+ros2 pkg create --build-type ament_cmake --node-name <my_node> <my_package>
+cd ..
+
++ build:
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+

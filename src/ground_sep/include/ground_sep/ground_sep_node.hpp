@@ -134,9 +134,12 @@ private:
   rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr subscription_;
 
   // Algorithm parameters
-  double _min_percentage = 5;
-  double _max_distance = 0.005;
+  double _min_percentage = 50;
+  double _max_distance = 0.05;
   bool _color_pc_with_error = false;
+//  double _min_percentage;
+//  double _max_distance;
+//  bool _color_pc_with_error;
 
   std::vector<Color> colors;
 

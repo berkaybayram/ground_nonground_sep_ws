@@ -1,0 +1,6 @@
+---
+/**:
+  ros__parameters:
+    max_distance: 0.005
+    min_percentage: 5
+    color_pc_with_error: False

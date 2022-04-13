@@ -4,14 +4,24 @@ namespace ground_sep {
 
 GroundSeparationNode::GroundSeparationNode(
     const rclcpp::NodeOptions &node_options)
-    : Node("Ground_Cluster", node_options) {
+    : Node("ground_sep_node", node_options) {
 
   // Get node name
   _name = rclcpp::Node::get_name();
+//
+//  this->declare_parameter<double>("max_distance");
+//  this->declare_parameter<double>("min_percentage");
+//  this->declare_parameter<bool>("color_pc_with_error");
+//
+//
+//  rclcpp::Parameter str_param = this->get_parameter("my_str");
+//  rclcpp::Parameter int_param = this->get_parameter("my_int");
+//  rclcpp::Parameter double_array_param = this->get_parameter("my_double_array");
 
-  //    rclcpp::param::param<double>("~max_distance",_max_distance,0.005);
-  //    ros::param::param<double>("~min_percentage",_min_percentage,5);
-  //    ros::param::param<bool>("~color_pc_with_error",_color_pc_with_error,false);
+  std::cout << _max_distance << ", " << _min_percentage << ", " << _color_pc_with_error << "\n";
+//      rclcpp::param::param<double>("~max_distance",_max_distance,0.005);
+//      ros::param::param<double>("~min_percentage",_min_percentage,5);
+//      ros::param::param<bool>("~color_pc_with_error",_color_pc_with_error,false);
 
   // manually enable topic statistics via options
   auto options = rclcpp::SubscriptionOptions();

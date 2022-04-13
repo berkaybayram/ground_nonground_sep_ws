@@ -4,4 +4,4 @@ echo "BUILD COMPLETED..." &&
 #echo &&
 echo "running..." &&
 source ./install/setup.bash &&
-ros2 run ground_sep ground_sep_node # ros2 run <package> <executable>
+ros2 run ground_sep ground_sep_node_exe # ros2 run <package> <executable>

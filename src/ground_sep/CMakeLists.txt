@@ -32,11 +32,6 @@ add_definitions(${PCL_DEFINITIONS})
 
 target_link_libraries(ground_sep_node ${PCL_LIBRARIES})
 
-ament_target_dependencies(ground_sep_node
-        rclcpp
-        std_msgs
-        sensor_msgs)
-
 
 target_include_directories(ground_sep_node PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>

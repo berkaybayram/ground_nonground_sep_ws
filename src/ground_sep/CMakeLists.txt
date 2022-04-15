@@ -7,9 +7,6 @@ endif ()
 
 # find dependencies
 find_package(ament_cmake_auto REQUIRED)
-#find_package(rclcpp REQUIRED)
-#find_package(std_msgs REQUIRED)
-#find_package(sensor_msgs REQUIRED)
 ament_auto_find_build_dependencies()
 
 set(PCL_DIR "/home/berkay/libraries/libpcl-1.12.1/share/pcl-1.12/")

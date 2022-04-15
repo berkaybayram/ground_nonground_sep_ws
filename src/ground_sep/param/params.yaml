@@ -1,6 +1,6 @@
----
-/**:
-  ros__parameters:
-    max_distance: 0.005
-    min_percentage: 5
-    color_pc_with_error: False
+
+/ground_sep: # namespace
+  ground_sep_node:  # node name
+    ros__parameters:
+      max_iterations: 50 # ransac default
+      distanceThreshold: 0.1  # ransac threshold

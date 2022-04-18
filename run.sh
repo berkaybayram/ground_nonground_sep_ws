@@ -8,3 +8,5 @@ source ./install/setup.bash &&
 ros2 launch ground_sep launch.py
 
 #rviz2 -d ~/projects/ground_nonground_sep_ws/src/ground_sep/config/rviz2_cfg.rviz
+
+#ros2 run euclidean_clustering euclidean_clustering_node_exe # ros2 run <package> <executable>

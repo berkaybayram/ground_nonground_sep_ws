@@ -4,7 +4,7 @@ namespace EuclideanClustering {
 
 EuclideanClusteringNode::EuclideanClusteringNode(
     const rclcpp::NodeOptions &node_options)
-    : Node("euclidean_clustering_node", node_options),
+    : Node("EuclideanClusteringNode", node_options),
       _name(rclcpp::Node::get_name()) // Get node name
 {
 

@@ -1,0 +1,11 @@
+
+/euclidean_clustering: # namespace
+  EuclideanClusteringNode:  # node name
+    ros__parameters:
+      lx: 0.2
+      ly: 0.2
+      lz: 0.2
+      tolerance: 0.9
+      min_cluster_size: 5
+      max_cluster_size: 2500
+      cluster_intencity_increase_amount: 100.0

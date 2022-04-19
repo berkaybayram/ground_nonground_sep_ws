@@ -3,4 +3,4 @@
   ground_sep_node:  # node name
     ros__parameters:
       max_iterations: 50 # ransac default
-      distanceThreshold: 0.1  # ransac threshold
+      distanceThreshold: 0.3  # ransac threshold

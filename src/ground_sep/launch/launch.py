@@ -7,7 +7,9 @@ import os
 ground_sep_pkg_prefix = get_package_share_directory('ground_sep')
 ground_sep_param_file = os.path.join(ground_sep_pkg_prefix, 'param/params.yaml')
 
-# euclidean_clustering_pkg_prefix = get_package_share_directory('euclidean_clustering')
+euclidean_clustering_pkg_prefix = get_package_share_directory('euclidean_clustering')
+euclidean_clustering_param_file = os.path.join(euclidean_clustering_pkg_prefix, 'param/params.yaml')
+
 
 
 
@@ -16,10 +18,9 @@ def generate_launch_description():
         package='ground_sep',
         executable='ground_sep_node_exe',
         namespace='ground_sep',
-        parameters=[ground_sep_param_file],
+        parameters=[ground_sep_param_file]
         # prefix=['valgrind --tool=callgrind --dump-instr=yes -v --instr-atstart=yes'],
         # output='screen'
-
     )
 
     # ros2 run tf2_ros static_transform_publisher 0 0 0 0 -0.174533 0 map map_c
@@ -33,9 +34,7 @@ def generate_launch_description():
         package='euclidean_clustering',
         executable='euclidean_clustering_node_exe',
         namespace='euclidean_clustering',
-        # prefix=['valgrind --tool=callgrind --dump-instr=yes -v --instr-atstart=yes'],
-        # output='screen'
-
+        parameters=[euclidean_clustering_param_file]
     )
 
     return launch.LaunchDescription([ground_sep_node, static_transform_publisher, euclidean_clustering_node])

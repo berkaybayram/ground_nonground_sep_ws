@@ -24,6 +24,12 @@ private:
   // Node
   std::string name_;
 
+  // Algorithm parameters
+  float lx_, ly_, lz_;
+  float tolerance_;
+  int min_cluster_size_, max_cluster_size_;
+  float cluster_intencity_increase_amount_;
+
   // Subscribers
   rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr subscription_;
 

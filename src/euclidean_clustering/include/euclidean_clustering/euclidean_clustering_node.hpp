@@ -9,12 +9,10 @@
 #include <iostream>
 #include <memory>
 
-#include "rclcpp/rclcpp.hpp"
+#include "rclcpp/node.hpp"
 #include <rclcpp_components/register_node_macro.hpp>
 
 #include "sensor_msgs/msg/point_cloud2.hpp"
-
-#include <pcl_conversions/pcl_conversions.h>
 
 namespace EuclideanClustering {
 
@@ -22,14 +20,18 @@ class EuclideanClusteringNode : public rclcpp::Node {
 public:
   EuclideanClusteringNode(const rclcpp::NodeOptions &node_options);
 
-
 private:
   // Node
-  std::string _name;
+  std::string name_;
 
   // Subscribers
   rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr subscription_;
 
+  // Publishers
+  rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr
+      cluster_publisher_;
+
+  // Callbacks
   void topic_callback(sensor_msgs::msg::PointCloud2::SharedPtr msg) const;
 };
 
